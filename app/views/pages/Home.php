@@ -8,7 +8,7 @@
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">a simple site for share posts this app structure above <a href="https://github.com/MuhamexkhX/sharePosts">SimpleFramework</a> click to the link to go to the github page</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Share Post</button>
+                <a href="posts"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Share Post</button></a>
                 <button type="button" class="btn btn-outline-secondary btn-lg px-4">source code</button>
             </div>
       </div>

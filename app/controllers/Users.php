@@ -208,15 +208,8 @@ class Users extends Controller
         redirect('/users/login');
     }
 
-    public static function isSignedIn()
-    {
-        if(isset($_SESSION['user_id']))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+
+
+
+
 }

@@ -12,7 +12,7 @@ class User
 
     public function register($data)
     {
-        $this->db->query('INSERT INTO shareposts.users  (name, email, password) VALUES (:name, :email, :password) ');
+        $this->db->query('INSERT INTO shareposts.users (name, email, password) VALUES (:name, :email, :password) ');
 
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':email', $data['email']);
@@ -55,6 +55,24 @@ class User
         if($this->db->rowCount() > 0)
         {
             return true;
+        } else
+        {
+            return false;
+        }
+    }
+
+    public static function findUserById($id)
+    {
+        $db = new Database();
+        $db->query("SELECT * FROM shareposts.users WHERE id = :id");
+
+        $db->bind(':id', $id);
+
+        $row = $db->single();
+
+        if($db->rowCount() > 0)
+        {
+            return $row;
         } else
         {
             return false;
